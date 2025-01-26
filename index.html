@@ -2,20 +2,18 @@
 layout: default
 title: Homepage
 banner: 
-    heading: Radiance, Redefined
-    description: Clean, sustainable skincare crafted for your glow and the planet. 
+    heading: chromo-dope
+    button-name: discover
 services: 
-    heading: Our Collections
-    offerings: 
+    collection: 
         - image: /assets/images/heritage-sculpture.jpg
-          heading: Heritage
-          description: Celebrate timeless traditions with the Heritage Collection. Rooted in Bali's rich cultural legacy, these formulations combine ancient beauty rituals with sustainably sourced natural ingredients. Immerse yourself in wisdom of the past for deeply nourishing care that honours the earth.
+          heading: earrings
         - image: /assets/images/goddess.jpg
-          heading: goddess
-          description: Awaken your inner goddess with our Goddess Collection. Infused with luxurious botanicals and holistic formulations, this line inspires self-love and radiant confidence. Embrace the divine within and indulge in the magic of nature's finest treasures.
+          heading: rings
         - image: /assets/images/mystic-incense.jpg
-          heading: mystic
-          description: Step into a world of mystery with the Mystic Collection. Designed to connect mind, body, and soul, these products feature exotic ingredients and aromatherapeutic blends. Experience transcendence with every scent and texture
+          heading: necklaces
+        - image: /assets/images/mystic-incense.jpg
+          heading: bracelets
 overlap:
     image: /assets/images/bymne-fabric-products.jpg
     heading: Who are we
@@ -30,12 +28,31 @@ brand-names:
     - title: Turmeric
     - title: Frangipani Extract
 gallery:
-    - image: /assets/images/bymne-oil-square.jpg
-    - image: /assets/images/bymne-candle-square.jpg
-    - image: /assets/images/bymne-majorarnica-square.jpg
-    - image: /assets/images/bymne-minioil-square.jpg
-    - image: /assets/images/bymne-rollon-square.jpg
-    - image: /assets/images/bymne-oildropper-square.jpg
+    products:
+      - image: /assets/images/bymne-oil-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-candle-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-majorarnica-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-minioil-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-rollon-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-oildropper-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-oildropper-square.jpg
+        heading: product title
+        price: £price
+      - image: /assets/images/bymne-oildropper-square.jpg
+        heading: product title
+        price: £price
 contact:
   heading: contact us
   input-box-name-1: Name
@@ -46,18 +63,17 @@ contact:
 
 ---
 
-<!-----------Our Collections section ---------->
+<!----------- Collections section ---------->
 
 <section class="p-20">
     <div class="max-w-5xl m-auto">
-      <h2 class="uppercase py-4 text-3xl">{{page.services.heading}}</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
+      <h2 class="uppercase py-2 text-3xl">{{page.services.heading}}</h2>
+      <div class="grid md:grid-cols-2 gap-4 text-left">
 
-        {% for item in page.services.offerings %}
+        {% for item in page.services.collection %}
         <div>
           <div class="aspect-square bg-cover bg-center " style="background-image: url('{{item.image}}')"></div>
-          <h3 class="uppercase text-left md:text-center tracking-wider py-4">{{item.heading}}</h3>
-          <p class="text-left md:text-center text-sm md:text-base pl-0 border-t-2  border-black p-4">{{item.description}}</p>
+          <h3 class="uppercase text-left tracking-wider py-2">{{item.heading}}</h3>
         </div>
         {% endfor %}
 
@@ -87,21 +103,24 @@ contact:
     </section>
     
     <!---------- Gallery section ------------>
-    <section class="p-20 ">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center max-w-2xl flex items-center flex-col p-8 pb-16 m-auto">
-        <h2 class="p-4 text-3xl uppercase">discover your glow</h2>
-        <p>Dive into our thoughtfully curated collection of sustainable skincare esentials. Each product is designed to nourish, protect, and elevate your self-care routine. Which product will help bring out your radiance?</p>
+    <section class="px-8 pb-10 pt-0">
+    <div class="">
+      <div class="text-left p-8 pl-0">
+        <h3 class="text-xl capitalize">shop new in</h3>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {% for item in page.gallery %}
-        <div class=" bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {% for item in page.gallery.products %}
+        <div>
+          <div class=" bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
+          <div class="grid grid-cols-2">
+            <h4 class="capitalize text-left tracking-wider py-2 flex items-end">{{item.heading}}</h4>
+            <h5 class="capitalize text-right text-xs grid items-center justify-items-end tracking-wider py-2">{{item.price}}</h5>
+          </div>
+        </div>
 {% endfor %}
       </div>
 
-      <div class="flex justify-center items-center">
-        <button class="text-sm uppercase border border-black py-2 px-4 mt-16">shop now</button>
-      </div>
     </div>
     </section>
     

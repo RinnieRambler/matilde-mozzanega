@@ -1,18 +1,16 @@
 <!--------Header banner --------->
-<header class="p-8 min-h-screen bg-cover bg-center flex flex-col relative" style="background-image: url(/assets/images/Bymne-banner.jpg)">
+<header class="p-8 flex flex-col relative">
       <nav class="grid md:grid-cols-3 uppercase">
-        <div class="hidden md:flex items-center justify-around">
-          <a class="text-xs lg:text-base">heritage</a>
-          <a class="text-xs lg:text-base">goddess</a>
-          <a class="text-xs lg:text-base">mystic</a>
+        <div class="hidden md:flex items-left justify-around">
+          <a class="text-xs lg:text-base">shop</a>
+          <a class="text-xs lg:text-base">bespoke</a>
+          <a class="text-xs lg:text-base">about</a>
         </div>
         <div class="text-center">
-          <a class="text-white text-xl">Bymne</a>
+          <a class="text-black bg-gray-400 text-xl">matilde mozzanega</a>
         </div>
         <div class="hidden md:flex items-center justify-around">
-          <a class="text-xs lg:text-base">shop all</a>
-          <a class="text-xs lg:text-base">store locator</a>
-          <a class="text-xs lg:text-base">stories</a>
+          
         </div>
         <div class="burger-button md:hidden">
           <span class="burger-top"></span>
@@ -20,19 +18,17 @@
           <span class="burger-bottom"></span>
         </div>
         <div class="burger-menu md:hidden">
-          <a href="">heritage</a>
-          <a href="">goddess</a>
-          <a href="">mystic</a>
-          <a href="">shop all</a>
-          <a href="">store locator</a>
-          <a href="">stories</a>
-      </div>
+          <a href="">shop</a>
+          <a href="">bespoke</a>
+          <a href="">about</a>
+        </div>
       </nav>
-    <div class="text-center text-white p-8 m-auto">
-      <div>
-        <hr>
-        <h1 class="uppercase text-4xl lg:text-6xl p-4">{{page.banner.heading}}</h1> 
-        <p class="text-lg lg:text-xl">{{page.banner.description}}</p>
+    <div class="min-h-screen bg-cover bg-center" style="background-image: url(/assets/images/Bymne-banner.jpg)">
+      <div class="text-left inline-block align-text-bottom text-black p-8  m-auto">
+        <div class="">
+          <h3 class="uppercase text-xl lg:text-2xl text-white p-4 pl-0">{{page.banner.heading}}</h3> 
+          <button class="text-lg lg:text-xl uppercase border border-1 border-inherit text-white px-6 py-2">{{page.banner.button-name}}</button>
+        </div>
       </div>
     </div>
   </header>
