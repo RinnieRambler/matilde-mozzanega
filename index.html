@@ -1,0 +1,124 @@
+---
+layout: default
+title: Homepage
+banner: 
+    heading: Radiance, Redefined
+    description: Clean, sustainable skincare crafted for your glow and the planet. 
+services: 
+    heading: Our Collections
+    offerings: 
+        - image: /assets/images/heritage-sculpture.jpg
+          heading: Heritage
+          description: Celebrate timeless traditions with the Heritage Collection. Rooted in Bali's rich cultural legacy, these formulations combine ancient beauty rituals with sustainably sourced natural ingredients. Immerse yourself in wisdom of the past for deeply nourishing care that honours the earth.
+        - image: /assets/images/goddess.jpg
+          heading: goddess
+          description: Awaken your inner goddess with our Goddess Collection. Infused with luxurious botanicals and holistic formulations, this line inspires self-love and radiant confidence. Embrace the divine within and indulge in the magic of nature's finest treasures.
+        - image: /assets/images/mystic-incense.jpg
+          heading: mystic
+          description: Step into a world of mystery with the Mystic Collection. Designed to connect mind, body, and soul, these products feature exotic ingredients and aromatherapeutic blends. Experience transcendence with every scent and texture
+overlap:
+    image: /assets/images/bymne-fabric-products.jpg
+    heading: Who are we
+    description: At Bymne we believe skincare should be as kind to the planet as it is to your skin. Rooted in sustainability and simplicity, our mission is to create high-performing, refillable skincare essentials that nourish your natural beauty while reducing waste. Every product is thoughtfully crafted with clean, effective ingredients and a commitment to protecting our planet for future generations.  
+    button-text: Find out more
+    button-link: #
+brand-names:
+    - title: Virgin Coconut Oil
+    - title: Annatto Seed
+    - title: Aloe Vera
+    - title: Rice Bran Oil
+    - title: Turmeric
+    - title: Frangipani Extract
+gallery:
+    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/bymne-candle-square.jpg
+    - image: /assets/images/bymne-majorarnica-square.jpg
+    - image: /assets/images/bymne-minioil-square.jpg
+    - image: /assets/images/bymne-rollon-square.jpg
+    - image: /assets/images/bymne-oildropper-square.jpg
+contact:
+  heading: contact us
+  input-box-name-1: Name
+  input-box-name-2: Email
+  input-box-name-3: Your Message
+
+
+
+---
+
+<!-----------Our Collections section ---------->
+
+<section class="p-20">
+    <div class="max-w-5xl m-auto">
+      <h2 class="uppercase py-4 text-3xl">{{page.services.heading}}</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+
+        {% for item in page.services.offerings %}
+        <div>
+          <div class="aspect-square bg-cover bg-center " style="background-image: url('{{item.image}}')"></div>
+          <h3 class="uppercase text-left md:text-center tracking-wider py-4">{{item.heading}}</h3>
+          <p class="text-left md:text-center text-sm md:text-base pl-0 border-t-2  border-black p-4">{{item.description}}</p>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+    </section>
+    
+    <!-----------bg image with overlap text box -------------->
+    
+    <section class="md:min-h-[75vh] border-t border-black md:grid custom-grid bg-cover bg-center" style="background-image: url('{{page.overlap.image}}');">
+      <div></div>
+      <div class="bg-[#f4eee0]/50 md:bg-[#f4eee0] p-8 flex flex-col justify-center border-x border-black">
+        <h2 class="text-3xl uppercase">{{page.overlap.heading}}</h2>
+        <p class="text-sm py-6">{{page.overlap.description}}</p>
+        <button href="{{page.overlap.button-link}}" class="text-sm uppercase border border-black max-w-36 p-2">{{page.overlap.button-text}}</button>
+      </div>
+      <div></div>
+    </section>
+    
+    <!----------brand name section ---------->
+    
+    <section class="grid grid-cols-2 md:grid-cols-6 gap-[1px] bg-black p-[1px]">
+      {% for item in page.brand-names %}
+      <p class="text-center text-sm lg:text-base bg-[#f4eee0] p-2">{{item.title}}</p>
+      {% endfor %}
+
+    </section>
+    
+    <!---------- Gallery section ------------>
+    <section class="p-20 ">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl flex items-center flex-col p-8 pb-16 m-auto">
+        <h2 class="p-4 text-3xl uppercase">discover your glow</h2>
+        <p>Dive into our thoughtfully curated collection of sustainable skincare esentials. Each product is designed to nourish, protect, and elevate your self-care routine. Which product will help bring out your radiance?</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {% for item in page.gallery %}
+        <div class=" bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
+{% endfor %}
+      </div>
+
+      <div class="flex justify-center items-center">
+        <button class="text-sm uppercase border border-black py-2 px-4 mt-16">shop now</button>
+      </div>
+    </div>
+    </section>
+    
+    <!----------- Contact form section ---------->
+    
+    <section class="lg:grid custom-contact-grid min-h-[75vh] border border-black">
+      <div class="bg-cover bg-center border-r border-black" style="background-image: url('/assets/images/bymne-candle-scene.jpg');"></div>
+      <div class="p-20">
+        <h2 class="uppercase text-2xl py-4">{{page.contact.heading}}</h2>
+        <form class="">
+          <input type="text" id="name" name="name" placeholder="{{page.contact.input-box-name-1}}" class="block w-full bg-transparent border-b border-black placeholder:text-black placeholder:focus:text-gray-400 placeholder:uppercase placeholder:text-sm mb-4 focus:outline-none focus-visible:outline-none">
+          <input type="email" id="Email" name="Email" class="block w-full bg-transparent border-b border-black placeholder:text-black placeholder:focus:text-gray-400 placeholder:uppercase placeholder:text-sm mb-4 focus:outline-none focus-visible:outline-none" placeholder="{{page.contact.input-box-name-2}}" required>
+          <label for="Message" class="block uppercase text-sm text-black">{{page.contact.input-box-name-3}}</label>
+          <textarea id="Message" name="Message" class="block w-full bg-transparent border border-black mb-4 focus:outline-none focus-visible:outline-none resize-none" rows="6" maxlength="3000" required></textarea>
+          <div class="text-right">
+            <input type="submit" value="Send" class="border border-black py-2 px-8 uppercase text-sm">
+          </div>
+        </form>
+      </div>
+    </section>

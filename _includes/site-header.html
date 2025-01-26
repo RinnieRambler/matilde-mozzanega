@@ -1,0 +1,38 @@
+<!--------Header banner --------->
+<header class="p-8 min-h-screen bg-cover bg-center flex flex-col relative" style="background-image: url(/assets/images/Bymne-banner.jpg)">
+      <nav class="grid md:grid-cols-3 uppercase">
+        <div class="hidden md:flex items-center justify-around">
+          <a class="text-xs lg:text-base">heritage</a>
+          <a class="text-xs lg:text-base">goddess</a>
+          <a class="text-xs lg:text-base">mystic</a>
+        </div>
+        <div class="text-center">
+          <a class="text-white text-xl">Bymne</a>
+        </div>
+        <div class="hidden md:flex items-center justify-around">
+          <a class="text-xs lg:text-base">shop all</a>
+          <a class="text-xs lg:text-base">store locator</a>
+          <a class="text-xs lg:text-base">stories</a>
+        </div>
+        <div class="burger-button md:hidden">
+          <span class="burger-top"></span>
+          <span class="burger-middle"></span>
+          <span class="burger-bottom"></span>
+        </div>
+        <div class="burger-menu md:hidden">
+          <a href="">heritage</a>
+          <a href="">goddess</a>
+          <a href="">mystic</a>
+          <a href="">shop all</a>
+          <a href="">store locator</a>
+          <a href="">stories</a>
+      </div>
+      </nav>
+    <div class="text-center text-white p-8 m-auto">
+      <div>
+        <hr>
+        <h1 class="uppercase text-4xl lg:text-6xl p-4">{{page.banner.heading}}</h1> 
+        <p class="text-lg lg:text-xl">{{page.banner.description}}</p>
+      </div>
+    </div>
+  </header>
