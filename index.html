@@ -14,6 +14,11 @@ services:
           heading: necklaces
         - image: /assets/images/mystic-incense.jpg
           heading: bracelets
+text-image:
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cras vel enim in risus ultrices convallis. Proin et tellus vitae urna congue sollicitudin sed sed mi. Phasellus aliquam dui scelerisque blandit,
+    button-text: discover
+    button-link: #
+    image: /assets/images/heritage-sculpture.jpg
 overlap:
     image: /assets/images/bymne-fabric-products.jpg
     heading: Who are we
@@ -88,6 +93,31 @@ contact:
       </div>
     </div>
     </section>
+
+    <!----------- text and image section --------------->
+
+    <section class="grid grid-cols-2 border bg-[#d6e1d8]">
+
+      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+
+      <div class="p-20 self-end">
+        <p class="">{{page.text-image.description}}.</p>
+        <button class="border border-inherit uppercase py-2 px-6" href="{{page.text-image.button-link}}">{{page.text-image.button-text}}</button>
+      </div>
+
+    </section>
+
+    <!--------- double image section ----------->
+
+    <section class="grid grid-cols-2 border bg-[#d1ced9]">
+
+      <div class="m-36 bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+
+      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+
+
+    </section>
+    
     
     <!-----------bg image with overlap text box -------------->
     
