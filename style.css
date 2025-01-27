@@ -10,13 +10,6 @@
 
 /* Custom CSS */
 
-.custom-grid {
-    grid-template-columns: 1fr 500px 2fr;
-  }
-  
-  .custom-contact-grid {
-    grid-template-columns: 1fr 900px;
-  }
 
   header a:hover {
     text-shadow: 1px 0 0 currentColor;
@@ -31,9 +24,13 @@
     font-size: small;
   }
 
+  button {
+    font-size: x-small;
+  }
+
   button:hover {
-    background-color: black;
-    color:#f4eee0;
+    background-color: white;
+    color: black;
   }
   
   .burger-button {

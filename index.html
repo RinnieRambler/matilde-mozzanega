@@ -70,7 +70,7 @@ contact:
 <!----------- Paragraph section ---------->
 
 <section class="p-20 text-center">
-  <p class="max-w-[25%] m-auto">
+  <p class="max-w-[25%] m-auto py-10">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cras vel enim in risus ultrices convallis. Proin et tellus vitae urna congue sollicitudin sed sed mi. Phasellus aliquam dui scelerisque blandit,
   </p>
 </section>
@@ -101,8 +101,8 @@ contact:
       <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
 
       <div class="p-20 self-end">
-        <p class="">{{page.text-image.description}}.</p>
-        <button class="border border-inherit uppercase py-2 px-6" href="{{page.text-image.button-link}}">{{page.text-image.button-text}}</button>
+        <p class="py-8">{{page.text-image.description}}.</p>
+        <button class="border border-black uppercase py-2 px-6" href="{{page.text-image.button-link}}">{{page.text-image.button-text}}</button>
       </div>
 
     </section>
@@ -111,32 +111,9 @@ contact:
 
     <section class="grid grid-cols-2 border bg-[#d1ced9]">
 
-      <div class="m-36 bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="m-40 bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
 
       <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
-
-
-    </section>
-    
-    
-    <!-----------bg image with overlap text box -------------->
-    
-    <section class="md:min-h-[75vh] border-t border-black md:grid custom-grid bg-cover bg-center" style="background-image: url('{{page.overlap.image}}');">
-      <div></div>
-      <div class="bg-[#f4eee0]/50 md:bg-[#f4eee0] p-8 flex flex-col justify-center border-x border-black">
-        <h2 class="text-3xl uppercase">{{page.overlap.heading}}</h2>
-        <p class="text-sm py-6">{{page.overlap.description}}</p>
-        <button href="{{page.overlap.button-link}}" class="text-sm uppercase border border-black max-w-36 p-2">{{page.overlap.button-text}}</button>
-      </div>
-      <div></div>
-    </section>
-    
-    <!----------brand name section ---------->
-    
-    <section class="grid grid-cols-2 md:grid-cols-6 gap-[1px] bg-black p-[1px]">
-      {% for item in page.brand-names %}
-      <p class="text-center text-sm lg:text-base bg-[#f4eee0] p-2">{{item.title}}</p>
-      {% endfor %}
 
     </section>
     

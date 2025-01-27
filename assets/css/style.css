@@ -443,17 +443,14 @@ video {
 .col-span-full {
   grid-column: 1 / -1;
 }
+.m-36 {
+  margin: 9rem;
+}
 .m-auto {
   margin: auto;
 }
-.m-20 {
-  margin: 5rem;
-}
-.m-56 {
-  margin: 14rem;
-}
-.m-36 {
-  margin: 9rem;
+.m-40 {
+  margin: 10rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -496,6 +493,15 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-\[90\%\] {
+  min-height: 90%;
+}
+.min-h-\[95vh\] {
+  min-height: 95vh;
+}
+.min-h-\[92vh\] {
+  min-height: 92vh;
+}
 .w-full {
   width: 100%;
 }
@@ -519,6 +525,12 @@ video {
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -569,11 +581,12 @@ video {
 .border-t-2 {
   border-top-width: 2px;
 }
-.border-t-8 {
-  border-top-width: 8px;
-}
 .border-t-\[1rem\] {
   border-top-width: 1rem;
+}
+.border-\[\#d6e1d8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(214 225 216 / var(--tw-border-opacity));
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -582,9 +595,13 @@ video {
 .border-inherit {
   border-color: inherit;
 }
-.border-\[\#d6e1d8\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(214 225 216 / var(--tw-border-opacity));
+.bg-\[\#d1ced9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 206 217 / var(--tw-bg-opacity));
+}
+.bg-\[\#d6e1d8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 225 216 / var(--tw-bg-opacity));
 }
 .bg-\[\#f4eee0\] {
   --tw-bg-opacity: 1;
@@ -606,14 +623,6 @@ video {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-\[\#d6e1d8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 225 216 / var(--tw-bg-opacity));
-}
-.bg-\[\#d1ced9\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 206 217 / var(--tw-bg-opacity));
 }
 .bg-cover {
   background-size: cover;
@@ -672,6 +681,14 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -739,13 +756,6 @@ video {
 
 /* Custom CSS */
 
-.custom-grid {
-    grid-template-columns: 1fr 500px 2fr;
-  }
-  
-  .custom-contact-grid {
-    grid-template-columns: 1fr 900px;
-  }
 
   header a:hover {
     text-shadow: 1px 0 0 currentColor;
@@ -760,9 +770,13 @@ video {
     font-size: small;
   }
 
+  button {
+    font-size: x-small;
+  }
+
   button:hover {
-    background-color: black;
-    color:#f4eee0;
+    background-color: white;
+    color: black;
   }
   
   .burger-button {
@@ -963,5 +977,9 @@ video {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
