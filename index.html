@@ -25,13 +25,6 @@ overlap:
     description: At Bymne we believe skincare should be as kind to the planet as it is to your skin. Rooted in sustainability and simplicity, our mission is to create high-performing, refillable skincare essentials that nourish your natural beauty while reducing waste. Every product is thoughtfully crafted with clean, effective ingredients and a commitment to protecting our planet for future generations.  
     button-text: Find out more
     button-link: #
-brand-names:
-    - title: Virgin Coconut Oil
-    - title: Annatto Seed
-    - title: Aloe Vera
-    - title: Rice Bran Oil
-    - title: Turmeric
-    - title: Frangipani Extract
 gallery:
     products:
       - image: /assets/images/bymne-oil-square.jpg
@@ -58,11 +51,15 @@ gallery:
       - image: /assets/images/bymne-oildropper-square.jpg
         heading: product title
         price: £price
-contact:
-  heading: contact us
-  input-box-name-1: Name
-  input-box-name-2: Email
-  input-box-name-3: Your Message
+image-grid:
+    options:
+    - image: /assets/images/bymne-oil-square.jpg
+      image-size: 'wide'
+    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/bymne-oil-square.jpg
 
 
 
@@ -96,9 +93,9 @@ contact:
 
     <!----------- text and image section --------------->
 
-    <section class="grid grid-cols-2 border bg-[#d6e1d8]">
+    <section class="grid grid-cols-2 border border-black bg-[#d6e1d8]">
 
-      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
 
       <div class="p-20 self-end">
         <p class="py-8">{{page.text-image.description}}.</p>
@@ -109,16 +106,17 @@ contact:
 
     <!--------- double image section ----------->
 
-    <section class="grid grid-cols-2 border bg-[#d1ced9]">
+    <section class="grid grid-cols-2 border-black border bg-[#d1ced9]">
 
-      <div class="m-40 bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.text-image.image}}');"></div>
 
-      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.text-image.image}}');"></div>
 
     </section>
     
-    <!---------- Gallery section ------------>
-    <section class="px-8 pb-10 pt-0">
+    <!---------- Product gallery section ------------>
+    
+    <section class="px-8 pb-10 pt-0 bg-gray-100">
     <div class="">
       <div class="text-left p-8 pl-0">
         <h3 class="text-xl capitalize">shop new in</h3>
@@ -127,7 +125,7 @@ contact:
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         {% for item in page.gallery.products %}
         <div>
-          <div class=" bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
+          <div class="border-yellow-700 border bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
           <div class="grid grid-cols-2">
             <h4 class="capitalize text-left tracking-wider py-2 flex items-end">{{item.heading}}</h4>
             <h5 class="capitalize text-right text-xs grid items-center justify-items-end tracking-wider py-2">{{item.price}}</h5>
@@ -138,21 +136,15 @@ contact:
 
     </div>
     </section>
+
+    <!----------- image grid -------->
+
+    <section class="grid grid-cols-4 gap-1">
+
+      {% for item in page.image-grid.options limit:5 %}
+      <a class="{% if item.image-size == 'wide' %} col-span-4 min-h-[50vh] {% else %} col-span-1 aspect-square {% endif %} min-h-72 hover:opacity-80" style="background-image: url('{{item.image}}');">
+      </a>
+      {% endfor %}
+  
+  </section>
     
-    <!----------- Contact form section ---------->
-    
-    <section class="lg:grid custom-contact-grid min-h-[75vh] border border-black">
-      <div class="bg-cover bg-center border-r border-black" style="background-image: url('/assets/images/bymne-candle-scene.jpg');"></div>
-      <div class="p-20">
-        <h2 class="uppercase text-2xl py-4">{{page.contact.heading}}</h2>
-        <form class="">
-          <input type="text" id="name" name="name" placeholder="{{page.contact.input-box-name-1}}" class="block w-full bg-transparent border-b border-black placeholder:text-black placeholder:focus:text-gray-400 placeholder:uppercase placeholder:text-sm mb-4 focus:outline-none focus-visible:outline-none">
-          <input type="email" id="Email" name="Email" class="block w-full bg-transparent border-b border-black placeholder:text-black placeholder:focus:text-gray-400 placeholder:uppercase placeholder:text-sm mb-4 focus:outline-none focus-visible:outline-none" placeholder="{{page.contact.input-box-name-2}}" required>
-          <label for="Message" class="block uppercase text-sm text-black">{{page.contact.input-box-name-3}}</label>
-          <textarea id="Message" name="Message" class="block w-full bg-transparent border border-black mb-4 focus:outline-none focus-visible:outline-none resize-none" rows="6" maxlength="3000" required></textarea>
-          <div class="text-right">
-            <input type="submit" value="Send" class="border border-black py-2 px-8 uppercase text-sm">
-          </div>
-        </form>
-      </div>
-    </section>
