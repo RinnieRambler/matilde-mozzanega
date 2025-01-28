@@ -6,60 +6,57 @@ banner:
     button-name: discover
 services: 
     collection: 
-        - image: /assets/images/heritage-sculpture.jpg
+        - image: /assets/images/matilde-chin-hand.jpg
           heading: earrings
-        - image: /assets/images/goddess.jpg
+        - image: /assets/images/matilde-hand-pocket.jpg
           heading: rings
-        - image: /assets/images/mystic-incense.jpg
+        - image: /assets/images/matilde-decollete.jpg
           heading: necklaces
-        - image: /assets/images/mystic-incense.jpg
+        - image: /assets/images/matilde-ear.jpg
           heading: bracelets
 text-image:
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cras vel enim in risus ultrices convallis. Proin et tellus vitae urna congue sollicitudin sed sed mi. Phasellus aliquam dui scelerisque blandit,
     button-text: discover
     button-link: #
-    image: /assets/images/heritage-sculpture.jpg
-overlap:
-    image: /assets/images/bymne-fabric-products.jpg
-    heading: Who are we
-    description: At Bymne we believe skincare should be as kind to the planet as it is to your skin. Rooted in sustainability and simplicity, our mission is to create high-performing, refillable skincare essentials that nourish your natural beauty while reducing waste. Every product is thoughtfully crafted with clean, effective ingredients and a commitment to protecting our planet for future generations.  
-    button-text: Find out more
-    button-link: #
+    image: /assets/images/matilde-art-ring.jpg
+bordered-image:
+    image: /assets/images/matilde-petal-gold.jpg
+double-image:
+    image: /assets/images/matilde-ring-art-pink.jpg
 gallery:
     products:
-      - image: /assets/images/bymne-oil-square.jpg
+      - image: /assets/images/matilde-earring.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-candle-square.jpg
+      - image: /assets/images/matilde-ring.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-majorarnica-square.jpg
+      - image: /assets/images/matilde-chain.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-minioil-square.jpg
+      - image: /assets/images/matilde-necklace.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-rollon-square.jpg
+      - image: /assets/images/matilde-earring.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-oildropper-square.jpg
+      - image: /assets/images/matilde-ring.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-oildropper-square.jpg
+      - image: /assets/images/matilde-chain.jpg
         heading: product title
         price: £price
-      - image: /assets/images/bymne-oildropper-square.jpg
+      - image: /assets/images/matilde-necklace.jpg
         heading: product title
         price: £price
 image-grid:
     options:
-    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/matilde-art-ring-pink-wide.jpg
       image-size: 'wide'
-    - image: /assets/images/bymne-oil-square.jpg
-    - image: /assets/images/bymne-oil-square.jpg
-    - image: /assets/images/bymne-oil-square.jpg
-    - image: /assets/images/bymne-oil-square.jpg
-    - image: /assets/images/bymne-oil-square.jpg
+    - image: /assets/images/matilde-ring-box.jpg
+    - image: /assets/images/matilde-ear.jpg
+    - image: /assets/images/matilde-petal.jpg
+    - image: /assets/images/matilde-decollete.jpg
 
 
 
@@ -108,9 +105,9 @@ image-grid:
 
     <section class="grid grid-cols-2 border-black border bg-[#d1ced9]">
 
-      <div class="m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.bordered-image.image}}');"></div>
 
-      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
 
     </section>
     
@@ -142,7 +139,7 @@ image-grid:
     <section class="grid grid-cols-4 gap-1">
 
       {% for item in page.image-grid.options limit:5 %}
-      <a class="{% if item.image-size == 'wide' %} col-span-4 min-h-[50vh] {% else %} col-span-1 aspect-square {% endif %} min-h-72 hover:opacity-80" style="background-image: url('{{item.image}}');">
+      <a class="{% if item.image-size == 'wide' %} col-span-4 min-h-[60vh] {% else %} col-span-1 aspect-square {% endif %}bg-cover bg-center bg-no-repeat min-h-72 hover:opacity-80" style="background-image: url('{{item.image}}');">
       </a>
       {% endfor %}
   
