@@ -7,3 +7,10 @@ function toggleBurger() {
 }
 
 burgerButton.addEventListener('click', toggleBurger)
+
+
+$(document).ready(function(){
+  $('.slider-container').slick({
+    
+  });
+});

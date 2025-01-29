@@ -115,3 +115,41 @@
     text-align:center;
     white-space:nowrap;
   }
+
+  /* This is my arrows on slider */
+.slick-prev:before {
+  content: '→';
+  color: black;
+  font-family: inherit;
+}
+
+.slick-next:before {
+  content: '→';
+  color: black;
+  font-family: inherit;
+}
+
+.expandButton::after {
+    content: '\02795';
+}
+
+.active::after {
+    content: '\2212';
+}
+
+.expandable {
+    overflow: hidden;
+    max-height: 5rem;
+    transition: .8s;
+}
+
+.collapse {
+    max-height: 0;
+    transition: .5s;
+    overflow: hidden;
+    padding:0;
+}
+
+.collapsed-menu {
+    top: -24rem;
+}

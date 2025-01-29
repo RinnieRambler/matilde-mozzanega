@@ -443,14 +443,11 @@ video {
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
-.col-span-4 {
-  grid-column: span 4 / span 4;
-}
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
 }
 .m-40 {
   margin: 10rem;
@@ -464,9 +461,6 @@ video {
 }
 .mb-4 {
   margin-bottom: 1rem;
-}
-.mr-12 {
-  margin-right: 3rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -492,9 +486,6 @@ video {
 .min-h-\[40vh\] {
   min-height: 40vh;
 }
-.min-h-\[60vh\] {
-  min-height: 60vh;
-}
 .min-h-\[75vh\] {
   min-height: 75vh;
 }
@@ -513,9 +504,6 @@ video {
 .max-w-5xl {
   max-width: 64rem;
 }
-.max-w-\[50\%\] {
-  max-width: 50%;
-}
 .max-w-\[70\%\] {
   max-width: 70%;
 }
@@ -525,14 +513,11 @@ video {
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -637,9 +622,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
-.bg-gray-400 {
+.bg-gray-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 .bg-purple-100 {
   --tw-bg-opacity: 1;
@@ -647,10 +632,6 @@ video {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 .bg-cover {
   background-size: cover;
@@ -717,17 +698,14 @@ video {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pb-8 {
+  padding-bottom: 2rem;
+}
 .pl-0 {
   padding-left: 0px;
 }
 .pt-0 {
   padding-top: 0px;
-}
-.pb-4 {
-  padding-bottom: 1rem;
-}
-.pb-8 {
-  padding-bottom: 2rem;
 }
 .text-left {
   text-align: left;
@@ -887,70 +865,108 @@ video {
     text-align:center;
     white-space:nowrap;
   }
-  
-  .placeholder\:text-sm::-moz-placeholder {
+
+  /* This is my arrows on slider */
+.slick-prev:before {
+  content: '→';
+  color: black;
+  font-family: inherit;
+}
+
+.slick-next:before {
+  content: '→';
+  color: black;
+  font-family: inherit;
+}
+
+.expandButton::after {
+    content: '\02795';
+}
+
+.active::after {
+    content: '\2212';
+}
+
+.expandable {
+    overflow: hidden;
+    max-height: 5rem;
+    transition: .8s;
+}
+
+.collapse {
+    max-height: 0;
+    transition: .5s;
+    overflow: hidden;
+    padding:0;
+}
+
+.collapsed-menu {
+    top: -24rem;
+}
+
+.placeholder\:text-sm::-moz-placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-  
-  .placeholder\:text-sm::placeholder {
+
+.placeholder\:text-sm::placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-  
-  .placeholder\:uppercase::-moz-placeholder {
+
+.placeholder\:uppercase::-moz-placeholder {
   text-transform: uppercase;
 }
-  
-  .placeholder\:uppercase::placeholder {
+
+.placeholder\:uppercase::placeholder {
   text-transform: uppercase;
 }
-  
-  .placeholder\:text-black::-moz-placeholder {
+
+.placeholder\:text-black::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-  
-  .placeholder\:text-black::placeholder {
+
+.placeholder\:text-black::placeholder {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-  
-  .hover\:bg-black:hover {
+
+.hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-  
-  .hover\:text-\[\#f4eee0\]:hover {
+
+.hover\:text-\[\#f4eee0\]:hover {
   --tw-text-opacity: 1;
   color: rgb(244 238 224 / var(--tw-text-opacity));
 }
-  
-  .hover\:opacity-80:hover {
+
+.hover\:opacity-80:hover {
   opacity: 0.8;
 }
-  
-  .focus\:outline-none:focus {
+
+.focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-  
-  .placeholder\:focus\:text-gray-400:focus::-moz-placeholder {
+
+.placeholder\:focus\:text-gray-400:focus::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
-  
-  .placeholder\:focus\:text-gray-400:focus::placeholder {
+
+.placeholder\:focus\:text-gray-400:focus::placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
-  
-  .focus-visible\:outline-none:focus-visible {
+
+.focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-  
-  @media (min-width: 768px) {
+
+@media (min-width: 768px) {
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -966,11 +982,11 @@ video {
   .md\:hidden {
     display: none;
   }
-  .md\:min-h-\[75vh\] {
-    min-height: 75vh;
-  }
   .md\:min-h-\[60vh\] {
     min-height: 60vh;
+  }
+  .md\:min-h-\[75vh\] {
+    min-height: 75vh;
   }
   .md\:max-w-\[50\%\] {
     max-width: 50%;
@@ -992,8 +1008,8 @@ video {
     background-color: rgb(244 238 224 / var(--tw-bg-opacity));
   }
 }
-  
-  @media (min-width: 1024px) {
+
+@media (min-width: 1024px) {
   .lg\:grid {
     display: grid;
   }
@@ -1008,9 +1024,6 @@ video {
   }
   .lg\:max-w-\[25\%\] {
     max-width: 25%;
-  }
-  .lg\:grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
   .lg\:text-2xl {
     font-size: 1.5rem;

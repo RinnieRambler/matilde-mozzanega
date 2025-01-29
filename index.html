@@ -119,9 +119,9 @@ image-grid:
         <h3 class="text-xl capitalize">shop new in</h3>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="slider-container grid grid-cols-2 md:grid-cols-4 gap-4">
         {% for item in page.gallery.products %}
-        <div>
+        <div class="slider-item">
           <div class="border-yellow-700 border bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
           <div class="grid grid-cols-2">
             <h4 class="capitalize text-left tracking-wider py-2 flex items-end">{{item.heading}}</h4>
