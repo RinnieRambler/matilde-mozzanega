@@ -64,7 +64,7 @@ image-grid:
 <!----------- Paragraph section ---------->
 
 <section class="p-20 text-center">
-  <p class="max-w-[25%] m-auto py-10">
+  <p class="max-w-[50%] lg:max-w-[25%] m-auto py-10">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cras vel enim in risus ultrices convallis. Proin et tellus vitae urna congue sollicitudin sed sed mi. Phasellus aliquam dui scelerisque blandit,
   </p>
 </section>
@@ -92,7 +92,7 @@ image-grid:
 
     <section class="grid grid-cols-2 border border-black bg-[#d6e1d8]">
 
-      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
 
       <div class="p-20 self-end">
         <p class="py-8">{{page.text-image.description}}.</p>
@@ -107,7 +107,7 @@ image-grid:
 
       <div class="m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.bordered-image.image}}');"></div>
 
-      <div class="min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
+      <div class="min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
 
     </section>
     
@@ -139,7 +139,7 @@ image-grid:
     <section class="grid grid-cols-4 gap-1">
 
       {% for item in page.image-grid.options limit:5 %}
-      <a class="{% if item.image-size == 'wide' %} col-span-4 min-h-[60vh] {% else %} col-span-1 aspect-square {% endif %}bg-cover bg-center bg-no-repeat min-h-72 hover:opacity-80" style="background-image: url('{{item.image}}');">
+      <a class="{% if item.image-size == 'wide' %} col-span-4 min-h-[40vh] lg:min-h-[60vh] {% else %} col-span-1 aspect-square {% endif %}bg-cover bg-center bg-no-repeat lg:min-h-72 hover:opacity-80" style="background-image: url('{{item.image}}');">
       </a>
       {% endfor %}
   
