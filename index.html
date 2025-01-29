@@ -64,7 +64,7 @@ image-grid:
 <!----------- Paragraph section ---------->
 
 <section class="p-20 text-center">
-  <p class="max-w-[50%] lg:max-w-[25%] m-auto py-10">
+  <p class="max-w-[70%] md:max-w-[50%] lg:max-w-[25%] m-auto py-10">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cras vel enim in risus ultrices convallis. Proin et tellus vitae urna congue sollicitudin sed sed mi. Phasellus aliquam dui scelerisque blandit,
   </p>
 </section>
@@ -90,9 +90,9 @@ image-grid:
 
     <!----------- text and image section --------------->
 
-    <section class="grid grid-cols-2 border border-black bg-[#d6e1d8]">
+    <section class="grid md:grid-cols-2 border border-black bg-[#d6e1d8]">
 
-      <div class="min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="min-h-[40vh] md:min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
 
       <div class="p-20 self-end">
         <p class="py-8">{{page.text-image.description}}.</p>
@@ -103,11 +103,11 @@ image-grid:
 
     <!--------- double image section ----------->
 
-    <section class="grid grid-cols-2 border-black border bg-[#d1ced9]">
+    <section class="md:grid md:grid-cols-2 border-black border bg-[#d1ced9]">
 
-      <div class="m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.bordered-image.image}}');"></div>
+      <div class="hidden md:col-span-1 m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.bordered-image.image}}');"></div>
 
-      <div class="min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
+      <div class="min-h-[40vh] md:min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
 
     </section>
     
