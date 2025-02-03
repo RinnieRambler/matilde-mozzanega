@@ -63,7 +63,7 @@ image-grid:
 ---
 <!----------- Paragraph section ---------->
 
-<section class="p-20 text-center">
+<section class="p-5 md:p-20 text-center">
   <p class="max-w-[70%] md:max-w-[50%] lg:max-w-[25%] m-auto py-10">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cras vel enim in risus ultrices convallis. Proin et tellus vitae urna congue sollicitudin sed sed mi. Phasellus aliquam dui scelerisque blandit,
   </p>
@@ -92,7 +92,7 @@ image-grid:
 
     <section class="grid md:grid-cols-2 border border-black bg-[#d6e1d8]">
 
-      <div class="min-h-[40vh] md:min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
+      <div class="min-h-[30vh] md:min-h-[40vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-r border-black" style="background-image: url('{{page.text-image.image}}');"></div>
 
       <div class="p-20 self-end">
         <p class="py-8">{{page.text-image.description}}.</p>
@@ -103,11 +103,11 @@ image-grid:
 
     <!--------- double image section ----------->
 
-    <section class="md:grid md:grid-cols-2 border-black border bg-[#d1ced9]">
+    <section class="grid grid-cols-2 min-h-[30vh] md:min-h-[40vh] lg:min-h-[90vh] border-black border bg-[#d1ced9]">
 
-      <div class="hidden md:col-span-1 m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.bordered-image.image}}');"></div>
+      <div class="hidden md:block m-20 lg:m-40 bg-cover bg-no-repeat bg-center border-white border-2" style="background-image: url('{{page.bordered-image.image}}');"></div>
 
-      <div class="min-h-[40vh] md:min-h-[60vh] lg:min-h-[90vh] bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
+      <div class="col-span-2 md:col-span-1 bg-cover bg-no-repeat bg-center border-l border-black" style="background-image: url('{{page.double-image.image}}');"></div>
 
     </section>
     
@@ -119,9 +119,9 @@ image-grid:
         <h3 class="text-xl capitalize">shop new in</h3>
       </div>
 
-      <div class="slider-container grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         {% for item in page.gallery.products %}
-        <div class="slider-item">
+        <div class="">
           <div class="border-yellow-700 border bg-cover aspect-square" style="background-image: url('{{item.image}}');"></div>
           <div class="grid grid-cols-2">
             <h4 class="capitalize text-left tracking-wider py-2 flex items-end">{{item.heading}}</h4>
